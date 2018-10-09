@@ -11,7 +11,8 @@ const sequelize = new Sequelize('dfiqmh2rdudba6', 'zelmdoftoxyrnz', '16c2d5b3305
 		min: 0,
 		acquire: 30000,
 		idle: 10000
-	}
+	},
+	ssl: true
 })
 
 const Merchant = MerchantModel(sequelize, Sequelize)
