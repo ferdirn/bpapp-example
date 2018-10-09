@@ -14,6 +14,11 @@ app.listen(port, () => {
 	console.log(`Running on pprt ${port}`)
 })
 
+// index
+app.get('/', (req, res) => {
+	res.render('index')
+})
+
 // create a merchant
 app.post('/api/merchants', (req, res) => {
 	Merchant.create(req.body)
