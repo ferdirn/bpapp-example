@@ -24,3 +24,5 @@ app.post('/api/merchants', (req, res) => {
 app.get('/api/merchants', (req, res) => {
 	Merchant.findAll().then(merchants => res.json(merchants))
 })
+
+module.exports = app
