@@ -1,17 +1,17 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const path = require('path')
-const { Merchant } = require('./sequelize')
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+const { Merchant } = require('./sequelize');
 
-const app = express()
-app.use(bodyParser.json())
+const app = express();
+app.use(bodyParser.json());
 
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-const port = 3000
+const port = 3000;
 app.listen(port, () => {
-	console.log(`Running on pprt ${port}`)
+	console.log(`Running on port ${port}`)
 })
 
 // index
@@ -30,4 +30,4 @@ app.get('/api/merchants', (req, res) => {
 	Merchant.findAll().then(merchants => res.json(merchants))
 })
 
-module.exports = app
+module.exports = app;
