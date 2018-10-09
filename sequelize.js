@@ -15,13 +15,11 @@ const sequelize = new Sequelize('dfiqmh2rdudba6', 'zelmdoftoxyrnz', '16c2d5b3305
 	ssl: true
 })
 
-const Merchant = MerchantModel(sequelize, Sequelize)
+const Merchant = MerchantModel(sequelize, Sequelize);
 
 sequelize.sync()
 	.then(() => {
 		console.log(`Database & tables created!`)
 	})
 
-module.exports = {
-	Merchant
-}
+module.exports = Merchant;
